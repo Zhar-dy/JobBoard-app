@@ -31,7 +31,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
     Route::get('jobpost/{jobpost}/edit', [JobPostController::class, 'edit'])->name('jobpost.edit');
     Route::put('jobpost/{jobpost}', [JobPostController::class, 'update'])->name('jobpost.update');
     Route::delete('jobpost/{jobpost}', [JobPostController::class, 'destroy'])->name('jobpost.destroy');
-    Route::get('jobpost', [JobPostController::class, 'in    dexing'])->name('jobpost.indexing');
+    Route::get('jobpost', [JobPostController::class, 'indexing'])->name('jobpost.indexing');
 
     //jobapp routes
     Route::get('/jobapp/show/{jobpost}/{jobapp}', [JobAppController::class, 'show'])->name('jobapp.show');

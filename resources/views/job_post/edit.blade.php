@@ -45,8 +45,7 @@
 
                                 <div class="col-md-6">
                                     <select name="category" class="form-select" aria-label="Default select example">
-                                        <option value="IT" @selected($jobpost->category == 'IT')>{{ __('Information Technology') }}</option>
-                                        <option value="Medical" @selected($jobpost->category == 'Medical')>{{ __('Medical') }}</option>
+                                       
                                     </select>
                                 </div>
                             </div>
@@ -79,8 +78,8 @@
                                     class="col-md-4 col-form-label text-md-end">{{ __('Update Status') }}</label>
                                 <div class="col-md-6">
                                     <select name="status" class="form-select" aria-label="Default select example">
-                                        <option value="rejected" @selected($jobpost->status === 'pending')>{{ __('Reject') }}</option>
-                                        <option value="approved" @selected($jobpost->status == 'approved')>{{ __('Approve') }}</option>
+                                        <option value="rejected" >{{ __('Reject') }}</option>
+                                        <option value="approved">{{ __('Approve') }}</option>
                                     </select>
                                 </div>
                             </div>

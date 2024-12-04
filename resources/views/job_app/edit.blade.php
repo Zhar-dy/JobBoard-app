@@ -9,7 +9,7 @@
                 <div class="card-body">
 
                     <div class="card-body">
-                        <form action="{{ route('jobapp.update', [$jobpost->id, $jobapp->id])}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('jobapp.update', $jobpost)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <input type="hidden" name="job_post_id" value="{{$jobpost->id}}">

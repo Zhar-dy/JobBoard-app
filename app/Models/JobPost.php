@@ -35,13 +35,16 @@ class JobPost extends Model
 
     public function scopeSearch($query, $search = null)
     {
-        $query->where(function ($query2) use ($search){
-            if($search)
-            {
-                $query2->where('name','LIKE','%' .$search. '%');
-            }
+        $query->where(function ($query2) use ($search) {
+            if ($search) {
+                $query2->where('name', 'like', "%" . $search . "%");
+                // $query2->orwhere('description', 'like', "%" . $search . "%");
 
-            return $query2;
+                //to find in other table
+                // $query2->orwhereHas('', function ($query3) use ($search) {
+                //     $query3->where('', 'like', "%" . $search . "%");
+                // });
+            }
         });
 
         return $query;
